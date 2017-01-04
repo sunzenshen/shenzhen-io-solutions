@@ -1,0 +1,49 @@
+[name] Using undocumented instructions
+[puzzle] Sz000
+[production-cost] 600
+[power-usage] 58
+[lines-of-code] 5
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+........1C............
+.........34...........
+......................
+........1C............
+.........34...........
+......................
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 3
+[code] 
+@ slp 4
+  gen p0 2 1
+  gen p0 1 4
+  
+# The undocumented
+# instruction plot
+# was genius and
+# evil, espec with
+# the leaderboard
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 6
+[is-puzzle-provided] true
+[code] 
+@ slp 6
+  gen p0 6 6
+  
+# why is this
+# so hard? :(
+

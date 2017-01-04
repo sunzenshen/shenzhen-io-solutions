@@ -1,0 +1,74 @@
+[name] New design 1
+[puzzle] Sz035
+[production-cost] 900
+[power-usage] 691
+[lines-of-code] 22
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+...........94.1C......
+......94...A...A......
+......34...354.2......
+.........14...........
+............14........
+......................
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 3
+[code] 
+  add x0 
+  tgt acc 0
++ mov 100 x1
+- mov 0 x1
+  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 3
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 4
+[code] 
+  mov x0 acc
+  teq acc -999
++ mov 0 x1
+  teq acc 1
++ mov 1 x1
+  teq acc 0
++ mov -1 x1
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 7
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 12
+[y] 6
+[code] 
+start:  slx x0
+  teq x0 0
++ mov 0 p1
++ mov 100 acc
++ jmp start
+  mov acc p1
+  teq acc 0
++ mov 100 acc
+- mov 0 acc
+

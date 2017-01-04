@@ -1,0 +1,85 @@
+[name] New design 1
+[puzzle] Sz015
+[production-cost] 1500
+[power-usage] 993
+[lines-of-code] 36
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+........155555555C....
+....8...1554.1555E....
+....354.1C.......A....
+....8....A14....16....
+....A....355554.......
+....35555555554.......
+......................
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 10
+[y] 2
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 2
+[code] 
+# 60<x<80
+  mov 0 p1
+end:  slx x1
+  mov x1 null
+  mov p0 acc
+  tlt acc 40
++ jmp kill
+  tgt acc 79
++ jmp kill
+- mov 80 p1
+kill:
++ mov 30 p1
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 4
+[code] 
+# 40<x<60
+  mov 0 p1
+end:  slx x0
+  mov x0 null
+  mov p0 acc
+  tlt acc 40
++ jmp kill
+- tgt acc 79
++ jmp kill
+- mov 50 p1
+kill:
++ mov 0 p1
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 5
+[code] 
+  mov p0 acc #x
+  tlt acc 20
+- tgt acc 79
++ mov 30 p1
++ jmp end
+- tlt acc 40
++ mov 0 p1
++ jmp end
+- tlt acc 60
++ mov acc x3
++ jmp end
+- mov acc x2
+end:  slp 1
+  mov 0 p1
+
