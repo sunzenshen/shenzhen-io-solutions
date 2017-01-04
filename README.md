@@ -13,4 +13,4 @@ That said, since I'm planning on posting unoptimized solutions before I complete
 
 Enjoy!
 
-- Alan Shen
+~ Alan Shen
