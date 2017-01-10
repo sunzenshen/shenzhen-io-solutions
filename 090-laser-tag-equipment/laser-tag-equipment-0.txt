@@ -1,0 +1,85 @@
+[name] New design 1
+[puzzle] Sz048
+[production-cost] 1500
+[power-usage] 800
+[lines-of-code] 22
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.......15554.155555C..
+..954........154.1CA..
+..2941C...94.14...A2..
+..16956...A.......34..
+..8.34.1556...8.......
+..3554........34.154..
+......................
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 15
+[y] 2
+[code] 
+  slx x0
+  mov x0 null
+  gen p1 1 1
+
+[chip] 
+[type] UC4
+[x] 5
+[y] 3
+[code] 
+  mov x0 acc
+  teq acc 10
++ mov 0 p0
++ mov 0 p1
+- tlt acc 100
+- mov 100 p0
+- mov 100 p1
+  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 14
+[y] 4
+
+[chip] 
+[type] DX3
+[x] 4
+[y] 6
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 6
+[code] 
+  slx x3
+  teq x3 100
++ mov x0 acc
+  teq p1 100
++ tgt acc 0
++ teq p0 100
++ mov acc x2
++ sub 1
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 15
+[y] 6
+[code] 
+  mov p1 x0
+  slp 1
+
+[chip] 
+[type] DIAL7
+[x] 6
+[y] 8
+[is-puzzle-provided] true
+
