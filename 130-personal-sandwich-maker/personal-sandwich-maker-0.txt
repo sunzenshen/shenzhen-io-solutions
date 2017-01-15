@@ -1,0 +1,101 @@
+[name] New design 1
+[puzzle] Sz007EZ
+[production-cost] 1300
+[power-usage] 155
+[lines-of-code] 26
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....954.1555555555C...
+...9694...954.155434..
+...A.35554A.....9554..
+..82....15694..16154..
+..354.14.14355555554..
+...14.1549555554..94..
+.......156155555556...
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 2
+[code] 
+  slx x0
+  mov x0 acc
+  mov acc x3
+  teq acc 1
++ mov 3 x1
+  teq acc 2
++ mov 2 x1
+  teq acc 3
++ mov 4 x1
+  slp 1
+  gen p1 1 0
+
+[chip] 
+[type] BRIDGE
+[x] 7
+[y] 2
+
+[chip] 
+[type] BRIDGE
+[x] 10
+[y] 2
+
+[chip] 
+[type] BRIDGE
+[x] 3
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 15
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 12
+[y] 5
+[code] 
+  slx x0
+  mov x0 acc
+  slp 2
+  teq acc 1
++ gen p1 1 0
++ gen p0 1 0
+  teq acc 2
++ gen p0 1 0
+  teq acc 3
++ gen p1 1 0
++ gen p0 2 0
+
+[chip] 
+[type] BRIDGE
+[x] 17
+[y] 5
+
+[chip] 
+[type] UC4
+[x] 6
+[y] 7
+[code] 
+  slx x0
+  gen p1 1 x0
+  gen p1 1 0
+  gen p0 3 0
+
