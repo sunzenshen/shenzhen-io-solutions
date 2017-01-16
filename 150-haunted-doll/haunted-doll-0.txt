@@ -1,0 +1,87 @@
+[name] New design 1
+[puzzle] Sz008
+[production-cost] 1200
+[power-usage] 416
+[lines-of-code] 17
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.......154............
+......1554.1C.........
+.......14...2.........
+.......154.155554.....
+........14.14.........
+.......1C..1C.........
+........35556.........
+......................
+......................
+
+[chip] 
+[type] BANK
+[x] 5
+[y] 2
+[rom] 
+16,36,42,14,10,58,100,76,26,28,70,80,42,50
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 3
+[code] 
+@ mov 50 p1
+  slx x3
+  mov x3 dat
+  mov 13 acc
+i:teq dat 0
++ mov x0 p1
+- mov x2 p1
+  slp 1
+  sub 1
+  tlt acc 0
+- jmp i
+  
+
+[chip] 
+[type] BANK
+[x] 5
+[y] 4
+[rom] 
+100,80,41,14,14,41,69,74,54,27,19,40,75,50
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 4
+
+[chip] 
+[type] BRIDGE
+[x] 12
+[y] 4
+
+[chip] 
+[type] BRIDGE
+[x] 7
+[y] 6
+
+[chip] 
+[type] RND
+[x] 5
+[y] 7
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 9
+[y] 7
+[code] 
+  mov p0 acc
+  teq acc 1
++ mov 0 x1
+  teq acc 2
++ mov 1 x1
+  slp 1
+
